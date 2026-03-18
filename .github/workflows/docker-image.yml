@@ -26,5 +26,14 @@ jobs:
         echo "Iniciando Login"
         docker login -u $DOCKER_USER -p $TOKEN_PASSWORD
         echo "Fin del login"
+    
+    - name: Build Docker image
+      run: |
+        docker build -t jplara/docker-graphql:0.0.1 .
+
+    - name: 
+      run: |
+        docker push  jplara/docker-graphql:0.0.1 .
+
 
       # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
