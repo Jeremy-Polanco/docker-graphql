@@ -30,10 +30,9 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t jplara/docker-graphql:0.0.1 .
+        docker build -t jplara/docker-graphql:latest .
 
     - name: 
       run: |
         docker push jplara/docker-graphql:0.0.1 
-
-
-      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+        docker build -t jplara/docker-graphql:latest .
