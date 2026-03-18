@@ -35,4 +35,4 @@ jobs:
     - name: 
       run: |
         docker push jplara/docker-graphql:0.0.1 
-        docker build -t jplara/docker-graphql:latest .
+        docker push jplara/docker-graphql:latest .
